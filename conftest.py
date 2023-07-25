@@ -10,20 +10,6 @@ def browser():
     print("\nquit browser..")
     browser.quit()'''
 
-'''@pytest.mark.parametrize('language', ["en", "ru"])
-def test_guest_should_see_login_link(browser, language):
-    link = f"http://selenium1py.pythonanywhere.com/{language}/"
-    browser.get(link)
-    browser.find_element(By.CSS_SELECTOR, "#login_link")
-
-@pytest.mark.parametrize(scope="function", name='language', params=[
-    ('http://selenium1py.pythonanywhere.com/', 'en')
-    ('http://selenium1py.pythonanywhere.com/', 'ru')
-])
-def test_guest_should_see_login_link(browser, language):
-    link = f"http://selenium1py.pythonanywhere.com/{language}/"
-    browser.get(link)
-    browser.find_element(By.CSS_SELECTOR, "#login_link")'''
 def pytest_addoption(parser):
     parser.addoption('--language', action='store', default='en',
                      help="Choose language")
